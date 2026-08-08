@@ -41,48 +41,7 @@ export const Contact: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="bg-brand-gray/50 border border-white/5 rounded-3xl p-8 md:p-12 backdrop-blur-sm"
-        >
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-xs font-mono text-gray-500 uppercase tracking-wider">Name</label>
-                <input 
-                  type="text" 
-                  className="w-full bg-brand-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-purple transition-colors"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-mono text-gray-500 uppercase tracking-wider">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full bg-brand-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-purple transition-colors"
-                  placeholder="john@example.com"
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-2">
-              <label className="text-xs font-mono text-gray-500 uppercase tracking-wider">Message</label>
-              <textarea 
-                rows={5}
-                className="w-full bg-brand-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-purple transition-colors resize-none"
-                placeholder="Tell me about your project..."
-              />
-            </div>
-
-            <button className="w-full py-4 bg-brand-purple hover:bg-brand-purple-dark text-white font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group">
-              <span>Send Message</span>
-              <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </button>
-          </form>
-        </motion.div>
+        
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import React from 'react';
+import profileImg from '../../img/f.jpg'; // adjust relative path
 
 export const About: React.FC = () => {
   return (
@@ -12,11 +13,12 @@ export const About: React.FC = () => {
         className="flex flex-col md:flex-row items-center gap-12"
       >
         {/* Profile Picture */}
+        
         <div className="relative group">
           <div className="absolute inset-0 bg-brand-purple blur-2xl opacity-20 group-hover:opacity-40 transition-opacity rounded-full" />
           <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-2 border-brand-purple/30 overflow-hidden">
             <img
-              src="/img/f.jpg"
+              src={profileImg}
               alt="Profile"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               referrerPolicy="no-referrer"

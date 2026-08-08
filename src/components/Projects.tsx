@@ -1,26 +1,72 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github } from 'lucide-react';
 import React from 'react';
+import gimlePubImg from "../../img/gimlePubEntrance.webp";
+import portfolioImg from "../../img/port.png";
+import calImg from "../../img/cal.png";
+import weatherImg from "../../img/weather.png";
+import passImg from "../../img/passGen.png";
+import empImg from "../../img/empDash.png";
 
 const projects = [
   {
     id: 1,
     title: "BACHELOR PROJECT",
     category: "WEBSITE / PROJECT",
-    image: "/img/gimlePubEntrance.webp",
+    image: gimlePubImg,
     description: "This thesis presents the development of a responsive website for Gimle Pub, enhancing customer experience and services. Using research, user testing, and agile methods in collaboration with the client, we created a modern, user-friendly site that reflects the pub’s brand and strengthens its market presence.",
     tags: ["Html", "Css", "JS", "Customer experience", "User testing", "Marketing strategies"],
     demo1: "https://gimlepub.no/"
   },
   {
-    id: 2,
-    title: "PORTFOLIO",
-    category: "WEBSITE",
-    image:  "img/port.png",
-    description: "1st version of my own portfolio from scratch",
-    tags: ["Html", "Css", "JS", "Typescript", "React"],
-    demo2: "https://gimlepub.no/"
-  },
+  id: 2,
+  title: "PORTFOLIO",
+  category: "WEBSITE",
+  image: portfolioImg,
+  description: "1st version of my own portfolio from scratch",
+  tags: ["Html", "Css", "JS", "Typescript", "React"],
+  demo1: "https://flak98.github.io/farhadbecker-portfolio/"
+},
+
+{
+  id: 3,
+  title: "Weather Dashboard",
+  category: "WEBSITE",
+  image: weatherImg,
+  description: "simple web weather dashboard",
+  tags: ["Html", "Css", "JS", "React", "API"],
+  githubUrl: "https://github.com/FLAK98/weather-dashboard-"
+},
+
+{
+  id: 4,
+  title: "employee Dashboard",
+  category: "WEBSITE",
+  image: empImg,
+  description: "simple web employee dashboard",
+  tags: ["Html", "Css", "JS"],
+  githubUrl: "https://github.com/FLAK98/Web-Employee-Management-Dashboard"
+},
+
+{
+  id: 5,
+  title: "WebCalculator",
+  category: "WEBSITE",
+  image: calImg,
+  description: "simple web calculator",
+  tags: ["Html", "Css", "JS"],
+  githubUrl: "https://github.com/FLAK98/webcalculator"
+},
+
+{
+  id: 6,
+  title: "Password Generator",
+  category: "WEBSITE",
+  image: passImg,
+  description: "simple web password generator",
+  tags: ["Html", "Css", "JS"],
+  githubUrl: "https://github.com/FLAK98/webpasswordgenerator-"
+},
   
 ];
 
@@ -51,11 +97,13 @@ export const Projects: React.FC = () => {
           >
             
             <a 
-              href={project.demo1} 
+              href={ project.demo1 || project.githubUrl} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block group"
+              
 >
+  
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-brand-gray border border-white/5 mb-6">
     
             <motion.img
@@ -88,6 +136,7 @@ export const Projects: React.FC = () => {
                 {project.title}
               </h4>
               </a>
+             
               <p className="text-gray-400 text-sm font-light leading-relaxed">
                 {project.description}
               </p>

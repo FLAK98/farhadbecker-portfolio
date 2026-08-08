@@ -13,10 +13,7 @@ export const Hero: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="max-w-4xl w-full text-center"
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-purple/10 border border-brand-purple/20 text-brand-purple text-xs font-mono mb-8">
-          <Terminal size={14} />
-          <span>MY.PORTFOLIO.SYS.DEV // VERSION 2.0.25</span>
-        </div>
+        
 
         <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 leading-none">
           <TextScramble text="BE" className="block text-white" delay={500} />
